@@ -10,12 +10,7 @@ pipeline {
         DOCKER_CREDENTIALS_ID = 'dockerhub'
     }
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git credentialsId: 'github-token', url: 'https://github.com/SuryaaTiwari/mean-devops.git'
-            }
-        }
+   
 
         stage('Build & Push Backend') {
             steps {
