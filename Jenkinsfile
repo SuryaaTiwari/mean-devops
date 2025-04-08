@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/SuryaaTiwari/mean-devops-project.git'
+                git credentialsId: 'github-token', url: 'https://github.com/SuryaaTiwari/mean-devops-project.git'
             }
         }
 
@@ -42,9 +42,9 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 sh '''
-                    docker-compose down
-                    docker-compose pull
-                    docker-compose up -d
+                  docker-compose down
+                  docker-compose pull
+                  docker-compose up -d
                 '''
             }
         }
