@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+        jdk 'jdk-17'
+        maven 'maven'
+    }
+
     environment {
         DOCKER_CREDENTIALS_ID = 'dockerhub'
     }
@@ -37,9 +42,9 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 sh '''
-                  docker-compose down
-                  docker-compose pull
-                  docker-compose up -d
+                    docker-compose down
+                    docker-compose pull
+                    docker-compose up -d
                 '''
             }
         }
