@@ -10,8 +10,7 @@ pipeline {
         DOCKER_CREDENTIALS_ID = 'dockerhub'
     }
 
-   
-
+    stages {
         stage('Build & Push Backend') {
             steps {
                 script {
@@ -45,4 +44,5 @@ pipeline {
         }
     }
 }
+
 
