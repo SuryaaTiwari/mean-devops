@@ -18,6 +18,25 @@ Edit
 
 Make sure Docker and Docker Compose are installed.
 
+Some Plugin and Additional Credentials Needs to be added in Jenkins:
+Credentials: global
+:Dockerhub account and id:dockerhub
+git:github username and token which is generated from github
+
+Plugins:
+JDK  : Give its path also  and same name as the you provide in jenkinsfile
+MAVEN
+NODEJS
+BUILD TIMESTAMP
+PIPELINE UTILITY STEPS
+PIPELINE MAVEN INTEGRATION
+CLOUD BEES DOCKER 
+GIT 
+GITHUB
+
+
+
+
 ### Run the full stack:
 
 ```bash
