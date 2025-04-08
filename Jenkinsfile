@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: 'github-token', url: 'https://github.com/SuryaaTiwari/mean-devops-project.git'
+                git credentialsId: 'github-token', url: 'https://github.com/SuryaaTiwari/mean-devops.git'
             }
         }
 
